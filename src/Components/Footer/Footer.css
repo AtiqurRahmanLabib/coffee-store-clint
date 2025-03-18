@@ -1,0 +1,15 @@
+.footer-bg-custom {
+    background-image: url('../../assets/images/more/13.jpg');
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: fit-content;
+    
+  }
+  .copystick{
+    background-image: url('../../assets/images/more/24.jpg');
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: fit-content;
+  }

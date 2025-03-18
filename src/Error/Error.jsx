@@ -3,6 +3,7 @@ import errorImage from '../assets/images/404/404.gif'
 import { Link } from 'react-router-dom';
 import { FaArrowLeft } from "react-icons/fa";
 import TitleAndBg from '../Components/Title/TitleAndBg';
+import Footer from '../Components/Footer/Footer';
 const Error = () => {
     return (
         <div>
@@ -18,7 +19,7 @@ const Error = () => {
             <div className='mx-auto content-center items-center'>
                 <img className='content-center items-center mx-auto' src={errorImage} alt="" />
             </div>
-
+            <Footer></Footer>
         </div>
     );
 };
