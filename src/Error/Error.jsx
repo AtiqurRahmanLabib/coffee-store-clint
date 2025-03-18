@@ -8,7 +8,7 @@ const Error = () => {
     return (
         <div>
             <TitleAndBg></TitleAndBg>
-            <div className='mt-5 w-[172px] mx-auto'>
+            <div className='w-[172px] mx-auto  pt-15'>
 
                 <Link className='flex gap-2 items-center justify-center w-[172px] h-[72px] rounded-[10px] hover:bg-[#D2B48C] hover:text-[#374151]' to='/home'>
                     <FaArrowLeft></FaArrowLeft>

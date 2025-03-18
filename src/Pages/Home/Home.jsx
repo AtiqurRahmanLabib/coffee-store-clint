@@ -7,10 +7,19 @@ import icon2 from '../../assets/images/icons/2.png'
 import icon3 from '../../assets/images/icons/3.png'
 import icon4 from '../../assets/images/icons/4.png'
 import './Home.css'
+import { Link } from 'react-router-dom';
+import cups1 from '../../assets/images/cups/Rectangle 9.png'
+import cups2 from '../../assets/images/cups/Rectangle 10.png'
+import cups3 from '../../assets/images/cups/Rectangle 11.png'
+import cups4 from '../../assets/images/cups/Rectangle 12.png'
+import cups5 from '../../assets/images/cups/Rectangle 13.png'
+import cups6 from '../../assets/images/cups/Rectangle 14.png'
+import cups7 from '../../assets/images/cups/Rectangle 15.png'
+import cups8 from '../../assets/images/cups/Rectangle 16.png'
 
 const Home = () => {
     return (
-        <div className=''>
+        <div className='home-bg'>
             <TitleAndBg></TitleAndBg>
             <Header></Header>
             <div className='w-full h-[240px] bg-[#ECEAE3] flex gap-25 justify-center items-center' >
@@ -36,11 +45,33 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className='home-bg'>
-            
+            <div className=''>
+                <div className='text-center  mt-15'>
+                    <h1 className='font-rancho-regular text-[20px]'>--- Sip & Savor ---</h1>
+                    <p className='text-[#331A15] font-rancho-regular text-[55px]' >Our Popular Products</p>
+                    <Link to='/AddNewCoffee'><button className='w-[150px] h-[48px] mt-5 rounded-[5px] bg-[#E3B577]  border border-[#331A15] text-[#FFFFFF] font-rancho-regular text-[24px] hover:bg-transparent text-shadow-inner hover:text-black'>Add Coffee</button></Link>
+                </div>
+
+
+                <div className='justify-items-center '>
+                    <h1 className='font-rancho-regular text-[20px] text-[#1B1A1A] text-center mt-55'>Follow Us Now</h1>
+                    <p className='text-[#331A15] font-rancho-regular text-[55px] text-center pt-1'>Follow on Instagram</p>
+                    <div className='grid grid-cols-4 gap-5 mt-5'>
+                        <img className='w-[312px] h-[350px] rounded-[10px]' src={cups1} alt="" />
+                        <img className='w-[312px] h-[350px] rounded-[10px]' src={cups2} alt="" />
+                        <img className='w-[312px] h-[350px] rounded-[10px]' src={cups3} alt="" />
+                        <img className='w-[312px] h-[350px] rounded-[10px]' src={cups4} alt="" />
+                        <img className='w-[312px] h-[350px] rounded-[10px]' src={cups5} alt="" />
+                        <img className='w-[312px] h-[350px] rounded-[10px]' src={cups6} alt="" />
+                        <img className='w-[312px] h-[350px] rounded-[10px]' src={cups7} alt="" />
+                        <img className='w-[312px] h-[350px] rounded-[10px]' src={cups8} alt="" />
+                    </div>
+                </div>
             </div>
-            
+
+            <div className='mt-25'>
             <Footer></Footer>
+            </div>
         </div>
     );
 };

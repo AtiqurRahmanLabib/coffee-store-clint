@@ -1,8 +1,25 @@
-.home-bg{
+.home-bg {
     background-image: url('../../assets/images/more/1.png');
-    background-size: cover;
-    background-position: center;
-    width: auto;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    /* width: 100%; */
+    /* height: auto; */
+    background-size: 100%;
+
+}
+
+.home-bg2 {
+    background-image: url('../../assets/images/more/4.png');
+
+    background-repeat: no-repeat;
+    /* background-position:  ; */
+    width: 100%;
     height: auto;
-    
+
+    /* height: auto; */
+
+}
+
+.text-shadow-inner {
+    text-shadow: inset 2px 2px 4px black;
 }
