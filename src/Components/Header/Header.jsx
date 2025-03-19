@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.css'
+import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <div>
@@ -8,7 +9,7 @@ const Header = () => {
                     <h1 className='font-rancho-regular text-[55px] text-[#FFFFFF] '>Would you like a Cup of Delicious Coffee?</h1>
                     <p className='font-raleway-<uniquifier> text-[16px] text-[#FFFFFF]'>It's coffee time - Sip & Savor - Relaxation in every sip! Get the nostalgia back!! Your companion of <br /> every moment!!! Enjoy the beautiful moments and make them memorable.</p>
 
-                    <button className='w-[130px] h-[48px] bg-[#E3B577] text-[24px] font-rancho-regular hover:bg-transparent hover:border-[#FFFFFF] hover:border hover:text-[#FFFFFF] mt-5'>Learn More</button>
+                    <Link to='/learnmore404'> <button className='w-[130px] h-[48px] bg-[#E3B577] text-[24px] font-rancho-regular hover:bg-transparent hover:border-[#FFFFFF] hover:border hover:text-[#FFFFFF] mt-5'>Learn More</button></Link>
 
                 </div>
             </div>

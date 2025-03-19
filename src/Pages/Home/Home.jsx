@@ -55,7 +55,9 @@ const Home = () => {
 
                 <div className='justify-items-center '>
                     <h1 className='font-rancho-regular text-[20px] text-[#1B1A1A] text-center mt-55'>Follow Us Now</h1>
-                    <p className='text-[#331A15] font-rancho-regular text-[55px] text-center pt-1'>Follow on Instagram</p>
+                    <a href="https://www.instagram.com/espressoemporium/">
+                        <p className='text-[#331A15] font-rancho-regular text-[55px] text-center pt-1'>Follow on Instagram</p>
+                    </a>
                     <div className='grid grid-cols-4 gap-5 mt-5'>
                         <img className='w-[312px] h-[350px] rounded-[10px]' src={cups1} alt="" />
                         <img className='w-[312px] h-[350px] rounded-[10px]' src={cups2} alt="" />
@@ -70,7 +72,7 @@ const Home = () => {
             </div>
 
             <div className='mt-25'>
-            <Footer></Footer>
+                <Footer></Footer>
             </div>
         </div>
     );

@@ -23,9 +23,9 @@ const Footer = () => {
                         <FaLinkedin></FaLinkedin>
                     </div>
                     <p className='text-[#331A15] text-[45px] font-rancho-regular mt-5'>Get in touch</p>
-                    <p className='font-raleway-<uniquifier> text-[20px] text-[#1B1A1A]'>+88 01533 333 333</p>
+                    <p className='font-raleway-<uniquifier> text-[20px] text-[#1B1A1A]'>07 3236 4792</p>
                     <p className='font-raleway-<uniquifier> text-[20px] text-[#1B1A1A]'>info@gmail.com</p>
-                    <p className='font-raleway-<uniquifier> text-[20px] text-[#1B1A1A]'>72, Wall street, King Road, Dhaka</p>
+                    <p className='font-raleway-<uniquifier> text-[20px] text-[#1B1A1A]'>Lobby, 180 Ann Street, Brisbane QLD 4000</p>
                 </div>
 
                 <div className='contact-container grid  items-center'>
