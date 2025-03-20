@@ -15,8 +15,9 @@ const AddNewCoffee = () => {
         const Chef = form.get('Chef');
         const taste = form.get('taste');
         const Details = form.get('Details');
+        const Photo = form.get('Photo')
         // console.log('coffeeName:', coffeeName, 'Supplier:', Supplier, 'Cetegory:', Cetegory, 'Chef:', Chef, 'Taset:', taste, 'Details:', Details)
-        const newCoffee = { coffeeName, Supplier, Cetegory, Chef, taste, Details }
+        const newCoffee = { coffeeName, Supplier, Cetegory, Chef, taste, Details, Photo }
         fetch('http://localhost:5000/coffee', {
             method: 'POST',
             headers: {

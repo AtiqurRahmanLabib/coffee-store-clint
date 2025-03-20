@@ -7,7 +7,7 @@ import icon2 from '../../assets/images/icons/2.png'
 import icon3 from '../../assets/images/icons/3.png'
 import icon4 from '../../assets/images/icons/4.png'
 import './Home.css'
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import cups1 from '../../assets/images/cups/Rectangle 9.png'
 import cups2 from '../../assets/images/cups/Rectangle 10.png'
 import cups3 from '../../assets/images/cups/Rectangle 11.png'
@@ -16,8 +16,12 @@ import cups5 from '../../assets/images/cups/Rectangle 13.png'
 import cups6 from '../../assets/images/cups/Rectangle 14.png'
 import cups7 from '../../assets/images/cups/Rectangle 15.png'
 import cups8 from '../../assets/images/cups/Rectangle 16.png'
+import CoffeeCard from '../../Components/CoffeeCard/CoffeeCard';
 
 const Home = () => {
+    const coffees = useLoaderData();
+    const { coffee } = coffees
+    // console.log(coffees)
     return (
         <div className='home-bg'>
             <TitleAndBg></TitleAndBg>
@@ -50,6 +54,16 @@ const Home = () => {
                     <h1 className='font-rancho-regular text-[20px]'>--- Sip & Savor ---</h1>
                     <p className='text-[#331A15] font-rancho-regular text-[55px]' >Our Popular Products</p>
                     <Link to='/AddNewCoffee'><button className='w-[150px] h-[48px] mt-5 rounded-[5px] bg-[#E3B577]  border border-[#331A15] text-[#FFFFFF] font-rancho-regular text-[24px] hover:bg-transparent text-shadow-inner hover:text-black'>Add Coffee</button></Link>
+                </div>
+
+
+                <div className='grid grid-cols-2 justify-self-center gap-9 mt-9'>
+                    {
+                        coffees.map(coffee => <CoffeeCard
+                            key={coffee._id}
+                            coffee={coffee}
+                        ></CoffeeCard>)
+                    }
                 </div>
 
 
