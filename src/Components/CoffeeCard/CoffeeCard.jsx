@@ -2,10 +2,44 @@ import React from 'react';
 import { MdDelete } from "react-icons/md";
 import { FaPen } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
+import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 
 const CoffeeCard = ({ coffee }) => {
-    const { coffeeName, Supplier, Cetegory, Chef, taste, Details, Photo } = coffee;
+    const { _id, coffeeName, Supplier, Cetegory, Chef, taste, Details, Photo } = coffee;
     console.log(coffee)
+
+    const handleDelete = _id => {
+        console.log(_id)
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                fetch(`http://localhost:5000/coffee/${_id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        if (data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your coffee has been deleted.",
+                                icon: "success"
+                            });
+                        }
+                    })
+            }
+        });
+    }
+
     return (
         <div className=''>
             <div className='w-[648px] h-[300px] rounded-[10px] bg-[#F5F4F1]  content-center justify-center flex items-center gap-5'>
@@ -21,12 +55,14 @@ const CoffeeCard = ({ coffee }) => {
                     <div className='bg-[#D2B48C] rounded-[5px] w-[40px] h-[40px] content-center'>
                         <FaEye className='text-[#FFFFFF] justify-self-center'></FaEye>
                     </div>
-                    <div className='bg-[#3C393B] rounded-[5px] w-[40px] h-[40px] content-center'>
-                        <FaPen className='text-[#FFFFFF] justify-self-center'></FaPen>
-                    </div>
-                    <div className='bg-[#EA4744] rounded-[5px] w-[40px] h-[40px] content-center'>
+                    <Link to='/updateCoffee'>
+                        <div className='bg-[#3C393B] rounded-[5px] w-[40px] h-[40px] content-center'>
+                            <FaPen className='text-[#FFFFFF] justify-self-center'></FaPen>
+                        </div>
+                    </Link>
+                    <button onClick={() => handleDelete(_id)} className='bg-[#EA4744] rounded-[5px] w-[40px] h-[40px] content-center'>
                         <MdDelete className='text-[#FFFFFF] justify-self-center'></MdDelete>
-                    </div>
+                    </button>
                 </div>
             </div>
         </div>

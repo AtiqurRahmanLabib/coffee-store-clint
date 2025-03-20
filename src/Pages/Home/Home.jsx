@@ -68,7 +68,7 @@ const Home = () => {
 
 
                 <div className='justify-items-center '>
-                    <h1 className='font-rancho-regular text-[20px] text-[#1B1A1A] text-center mt-55'>Follow Us Now</h1>
+                    <h1 className='font-rancho-regular text-[20px] text-[#1B1A1A] text-center mt-25'>Follow Us Now</h1>
                     <a href="https://www.instagram.com/espressoemporium/">
                         <p className='text-[#331A15] font-rancho-regular text-[55px] text-center pt-1'>Follow on Instagram</p>
                     </a>
