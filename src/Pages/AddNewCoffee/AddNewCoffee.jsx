@@ -36,6 +36,7 @@ const AddNewCoffee = () => {
                         confirmButtonText: 'Ok'
                     })
                 }
+                e.target.reset()
             })
 
     }
