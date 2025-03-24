@@ -19,8 +19,9 @@ import cups8 from '../../assets/images/cups/Rectangle 16.png'
 import CoffeeCard from '../../Components/CoffeeCard/CoffeeCard';
 
 const Home = () => {
-    const coffees = useLoaderData();
-    const { coffee } = coffees
+    const loaderCoffees = useLoaderData();
+    const { coffee } = loaderCoffees;
+    
     // console.log(coffees)
     return (
         <div className='home-bg'>
@@ -59,7 +60,7 @@ const Home = () => {
 
                 <div className='grid grid-cols-2 justify-self-center gap-9 mt-9'>
                     {
-                        coffees.map(coffee => <CoffeeCard
+                        loaderCoffees.map(coffee => <CoffeeCard
                             key={coffee._id}
                             coffee={coffee}
                         ></CoffeeCard>)
@@ -68,7 +69,7 @@ const Home = () => {
 
 
                 <div className='justify-items-center '>
-                    <h1 className='font-rancho-regular text-[20px] text-[#1B1A1A] text-center mt-25'>Follow Us Now</h1>
+                    <h1 className='font-rancho-regular text-[20px] text-[#1B1A1A] text-center mt-9'>Follow Us Now</h1>
                     <a href="https://www.instagram.com/espressoemporium/">
                         <p className='text-[#331A15] font-rancho-regular text-[55px] text-center pt-1'>Follow on Instagram</p>
                     </a>

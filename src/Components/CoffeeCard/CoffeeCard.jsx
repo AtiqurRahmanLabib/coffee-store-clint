@@ -52,9 +52,11 @@ const CoffeeCard = ({ coffee }) => {
                     <p className='font-semibold text-[20px] font-raleway-<uniquifier> text-[#1B1A1A]'>Cetegory: <span className='text-[20px] text-[#5C5B5BB3] font-raleway-<uniquifier>'>{Cetegory}</span></p>
                 </div>
                 <div className='w-[40px] h-[150px] grid items-center cursor-pointer'>
-                    <div className='bg-[#D2B48C] rounded-[5px] w-[40px] h-[40px] content-center'>
-                        <FaEye className='text-[#FFFFFF] justify-self-center'></FaEye>
-                    </div>
+                    <button className='bg-[#D2B48C] rounded-[5px] w-[40px] h-[40px] content-center'>
+                        <Link to={`/viewPage/${_id}`}>
+                            <FaEye className='text-[#FFFFFF] justify-self-center'></FaEye>
+                        </Link>
+                    </button>
                     <Link to={`/updateCoffee/${_id}`}>
                         <button className='bg-[#3C393B] rounded-[5px] w-[40px] h-[40px] content-center cursor-pointer'>
                             <FaPen className='text-[#FFFFFF] justify-self-center'></FaPen>

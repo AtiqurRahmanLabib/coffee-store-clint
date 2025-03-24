@@ -11,7 +11,7 @@ const Footer = () => {
     return (
         <div className='footer-bg-custom'>
 
-            <div className='footer-container flex h-full items-center justify-center gap-55'>
+            <div className='footer-container flex h-full items-center justify-between w-[1308px] mx-auto'>
                 <div className='information-container grid items-center pl-55r'>
                     <img className='w-[75px] h-[90px]' src={logo1} alt="" />
                     <h1 className='text-[#331A15] font-rancho-regular text-[45px]'>Espresso Emporium</h1>
