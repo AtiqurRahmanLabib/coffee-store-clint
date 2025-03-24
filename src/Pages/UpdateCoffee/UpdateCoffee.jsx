@@ -22,7 +22,6 @@ const UpdateCoffee = () => {
         const Photo = form.get('Photo')
 
         const updateCoffee = { coffeeName, Supplier, Cetegory, Chef, taste, Details, Photo }
-        console.log(updateCoffee)
 
         fetch(`http://localhost:5000/coffee/${_id}`, {
             method: 'PUT',
@@ -35,7 +34,6 @@ const UpdateCoffee = () => {
             .then(data => {
                 console.log(data);
                 if (data.modifiedCount > 0) {
-                    console.log('successfully updated');
                     Swal.fire({
                         title: 'Success!',
                         text: 'Coffee updated successfully',

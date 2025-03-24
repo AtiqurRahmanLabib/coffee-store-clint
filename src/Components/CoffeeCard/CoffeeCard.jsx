@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 
 const CoffeeCard = ({ coffee }) => {
     const { _id, coffeeName, Supplier, Cetegory, Chef, taste, Details, Photo } = coffee;
-    console.log(coffee)
 
     const handleDelete = _id => {
         console.log(_id)
@@ -27,7 +26,6 @@ const CoffeeCard = ({ coffee }) => {
                 })
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data)
                         if (data.deletedCount > 0) {
                             Swal.fire({
                                 title: "Deleted!",

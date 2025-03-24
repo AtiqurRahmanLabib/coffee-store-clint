@@ -21,8 +21,6 @@ import CoffeeCard from '../../Components/CoffeeCard/CoffeeCard';
 const Home = () => {
     const loaderCoffees = useLoaderData();
     const { coffee } = loaderCoffees;
-    
-    // console.log(coffees)
     return (
         <div className='home-bg'>
             <TitleAndBg></TitleAndBg>

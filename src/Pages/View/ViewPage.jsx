@@ -2,13 +2,12 @@ import { Link, useLoaderData } from "react-router-dom";
 import Footer from "../../Components/Footer/Footer";
 import TitleAndBg from "../../Components/Title/TitleAndBg";
 import { FaArrowLeft } from "react-icons/fa";
-
+import './ViewPage.css'
 const ViewPage = () => {
     const loadedData = useLoaderData();
     const { Photo, coffeeName, Chef, Supplier, taste, Cetegory } = loadedData
-    console.log(loadedData)
     return (
-        <div>
+        <div className="bg">
             <div>
                 <TitleAndBg></TitleAndBg>
             </div>
